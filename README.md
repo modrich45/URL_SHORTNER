@@ -10,9 +10,6 @@ URL Shortener with multiple features
 
 🍡 You can search the associated data of your ShortURL(in case you don't want to look for it in the table) by using the search box
 
-## Demo
-
-https://www.youtube.com/watch?v=vbokstNosZM&ab_channel=ANURAGCHUGH
 
 ## Tech Stacks
 
@@ -73,27 +70,6 @@ Search the following in the browser and URL shortner will open up
 ```
 
 ## Internal Wokring:
-
-### URL Shrinking Mechanism:
-
-Whenever a Long url with its description is added in the form and Create button is clicked, the backend handles that route
-as a post route and Data is added to the database then the server redirects the browser to the initial page. Also the ShortURL is created using
-a shortID generator on the backend. Check the following code for reference:
-
-```bash
-//Adding new data to database
-app.post('/shortUrls', async (req,res)=>{
-    await ShortUrl.create({ full: req.body.fullUrl, Notes: req.body.Notes})
-    res.redirect('/')
-    //Redirecting will invoke get request to original page and the newly
-    //added data will be visible
-})
-```
-
-### Database on frontend
-
-Every get request to the initial page is rendered by the backend and all the ShortURLs and the data attached with them is send
-This is put in form of a table using html, bootstrap. The for.each loop is created using ejs.
 
 ### Redirecting of Short URLs to original URL
 
@@ -172,5 +148,5 @@ https://getbootstrap.com/docs/5.3/getting-started/introduction/
 
 💫 The project emphasized error handling, documentation, project organization, and provided opportunities for continuous improvement and future enhancements.
 
-## THANK YOU✌️🐶
+## THANK YOU .
 
